@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFDE3; /* cream background */
+    color: #C21010; /* main text color (deep red) */
+}
+
+header, nav, footer {
+    background-color: #C21010; /* strong red for header/nav */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+nav a.active {
+    background-color: white;
+    color: #C21010;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border: 2px solid #CFE8A9; /* subtle border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #E64848; /* coral for headers */
+}
+
+/* Home Page Specific Styles */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.main-container img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 12px;
+    margin-right: 40px;
+}
+
+.text-content {
+    max-width: 500px;
+    text-align: center;
+}
+
+.text-content h1 {
+    font-size: 3.2em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.text-content h1 span {
+    display: block;
+}
+
+.text-content p {
+    font-size: 1.4em;
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-container img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 80%;
+    }
+}
+
+button {
+    background-color: #E64848;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C21010; /* darker red on hover */
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    background-color: #CFE8A9;
+    color: #333;
+}
