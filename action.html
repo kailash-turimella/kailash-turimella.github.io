@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Take Action - Climate Awareness</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    nav {
+      background-color: #b30000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    nav a.active {
+      background-color: white;
+      color: #b30000;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background: none;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 25px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.15em;
+      color: #555;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 40px 30px 80px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: white;
+      border-left: 5px solid #b30000;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #b30000;
+      font-size: 1.2em;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #b30000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding-bottom: 60px;
+      font-size: 1.1em;
+    }
+
+    .footer-note a {
+      color: #b30000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .footer-note a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/moral-crisis">Moral Crisis</a>
+    <a href="/your-role">Your Role</a>
+    <a href="/interview">Interview</a>
+    <a href="/action" class="active">Take Action</a>
+    <a href="/sources">Sources</a>
+  </nav>
+
+  <header>
+    <h1>Ready to Take Action?</h1>
+    <p>You’ve read the facts and felt the urgency — now it’s time to do something about it. Whether it’s volunteering, learning, or supporting sustainable efforts, there are countless ways to get involved in climate action right here in the Bay Area.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Climate Action Now</h3>
+      <a href="http://climateactionnowcalifornia.org/" target="_blank">Visit Website →</a>
+    </div>
+    <div class="card">
+      <h3>350 Bay Area</h3>
+      <a href="https://350bayarea.org" target="_blank">Find a Local Group →</a>
+    </div>
+    <div class="card">
+      <h3>Garden for the Environment</h3>
+      <a href="https://www.gardenfortheenvironment.org/" target="_blank">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>The ClimateMusic Project</h3>
+      <a href="https://climatemusic.org" target="_blank">Explore Their Work →</a>
+    </div>
+    <div class="card">
+      <h3>City Grazing</h3>
+      <a href="https://citygrazing.org" target="_blank">Support Sustainable Grazing →</a>
+    </div>
+    <div class="card">
+      <h3>FoodWise</h3>
+      <a href="https://foodwise.org" target="_blank">Discover Local Food Systems →</a>
+    </div>
+    <div class="card">
+      <h3>Planting Justice (East Bay)</h3>
+      <a href="https://plantingjustice.org/volunteer/" target="_blank">Volunteer Now →</a>
+    </div>
+    <div class="card">
+      <h3>Friends of the Urban Forest</h3>
+      <a href="https://www.fuf.net/get-involved/volunteer/" target="_blank">Help Green SF →</a>
+    </div>
+    <div class="card">
+      <h3>SF Public Works</h3>
+      <a href="https://www.sfpublicworks.org/get_involved/volunteer" target="_blank">Get Involved →</a>
+    </div>
+    <div class="card">
+      <h3>Alcatraz Historic Gardens</h3>
+      <a href="https://www.parksconservancy.org/programs/npn/alcatraz-historic-gardens" target="_blank">Volunteer →</a>
+    </div>
+    <div class="card">
+      <h3>Black Point Historic Gardens</h3>
+      <a href="https://www.parksconservancy.org/programs/black-point-historic-gardens" target="_blank">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>Presidio Garden Stewards</h3>
+      <a href="https://www.parksconservancy.org/programs/presidio-garden-stewards" target="_blank">Join the Effort →</a>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    🡪 Want even more opportunities? <a href="https://www.volunteermatch.org/" target="_blank">Check out VolunteerMatch →</a>
+  </div>
+</body>
+</html>
