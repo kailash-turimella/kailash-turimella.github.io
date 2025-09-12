@@ -1,113 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f9f9f9;
-        }
+  <meta charset="UTF-8">
+  <title>Kailash Turimella</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
+    }
 
-        nav {
-            background-color: #b30000;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+    nav {
+      background-color: #b30000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-wrap: wrap;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 999px;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-            transform: scale(1.05);
-        }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-        nav a.active {
-            background-color: white;
-            color: #b30000;
-        }
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
 
-        .main-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
-        }
+    .nav-links a.active {
+      background-color: white;
+      color: #b30000;
+    }
 
-        .main-container img {
-            max-width: 40%;
-            height: auto;
-            border-radius: 12px;
-            margin-right: 40px;
-        }
+    .nav-icons {
+      position: absolute;
+      right: 30px;
+      display: flex;
+      gap: 10px;
+    }
 
-        .text-content {
-            max-width: 500px;
-            text-align: center;
-        }
+    .nav-icons a {
+      background-color: white;
+      color: #b30000;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
 
-        .text-content h1 {
-            font-size: 3.2em;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 50px;
-        }
+    .nav-icons a:hover {
+      transform: scale(1.1);
+      background-color: #fff3f3;
+    }
 
-        .text-content h1 span {
-            display: block;
-        }
+    .main-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
 
-        .text-content p {
-            font-size: 1.4em;
-            line-height: 1.8;
-            color: #555;
-            font-family: 'Open Sans', sans-serif;
-        }
+    .main-container img {
+      max-width: 30%;
+      height: auto;
+      border-radius: 12px;
+      margin-right: 40px;
+      border: 2px solid #b30000;
+    }
 
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-                text-align: center;
-            }
+    .text-content {
+      max-width: 500px;
+      text-align: center;
+    }
 
-            .main-container img {
-                margin-right: 0;
-                margin-bottom: 20px;
-                max-width: 80%;
-            }
-        }
-    </style>
+    .text-content h1 {
+      font-size: 3em;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+      color: #E64848;
+    }
+
+    .text-content p {
+      font-size: 1.4em;
+      line-height: 1.8;
+      color: #555;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-container img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 80%;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-icons {
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="/" class="active">Home</a>
-        <a href="/moral-crisis">Moral Crisis</a>
-        <a href="/your-role">Your Role</a>
-        <a href="/interview">Interview</a>
-        <a href="/action">Take Action</a>
-        <a href="/sources">Sources</a>
-    </nav>
 
-    <div class="main-container">
-        <img src="/images/homepage.png" alt="Climate image">
-        <div class="text-content">
-            <h1><span>Rethinking</span><span>Climate Change</span></h1>
-            <p>Climate change is not just about emissions or rising temperatures — it’s about what we owe to each other, to the vulnerable, and to the future. Let's look at this crisis through an ethical and moral lens.</p>
-        </div>
+  <nav>
+    <div class="nav-links">
+      <a href="/" class="active">Home</a>
+      <a href="/experience">Experience</a>
+      <a href="/projects">Projects</a>
     </div>
+    <div class="nav-icons">
+      <a href="mailto:kailash.turimella@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/kailash-turimella" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/kailash-turimella" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <img src="images/headshot.jpg" alt="Kailash Turimella Headshot">
+    <div class="text-content">
+      <h1>Kailash Turimella</h1>
+      <p>I’m a Computer Science student at the University of San Francisco (AI Concentration & Honors College) passionate about building intelligent, scalable systems. I’ve developed AI-driven workflows at Dreamable, engineered cloud infrastructure and guardrails at Publicis Sapient, and created end-to-end AI applications like Companion AI and CourseBot. I enjoy turning complex technical challenges into practical solutions and am eager to contribute to innovative AI and software engineering projects.</p>  
+    </div>
+  </div>
+
 </body>
 </html>

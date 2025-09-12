@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - Kailash Turimella</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    nav {
+      background-color: #b30000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .nav-links a.active {
+      background-color: white;
+      color: #b30000;
+    }
+
+    .nav-icons {
+      position: absolute;
+      right: 30px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-icons a {
+      background-color: white;
+      color: #b30000;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-icons a:hover {
+      transform: scale(1.1);
+      background-color: #fff3f3;
+    }
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row with gap */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        flex: 0 1 calc(50% - 20px); /* Allows two cards per row */
+        box-sizing: border-box;
+    }
+
+
+    .project-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #E64848;
+      margin: 0;
+    }
+
+    .project-description {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .project-details {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 10px;
+      text-align: left;
+      display: none;
+      padding: 0 20px 0 40px;
+    }
+
+    .project-details li {
+      margin-bottom: 10px;
+    }
+
+    .more-btn {
+      margin-top: 10px;
+      color: #E64848;
+      cursor: pointer;
+      font-weight: bold;
+      background: none;
+      border: none;
+      font-size: 1em;
+      transition: color 0.2s ease;
+    }
+
+    .more-btn:hover {
+      color: #ff7f7f;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="/" class="active">Projects</a>
+    </div>
+    <div class="nav-icons">
+      <a href="mailto:kailash.turimella@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/kailash-turimella" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/kailash-turimella" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+  <!-- Projects -->
+  <div class="projects-container">
+
+    <!-- AI COURSEBOT -->
+    <div class="project-card">
+      <img src="images/project_aicoursebot.png" alt="CourseBot" class="project-image">
+      <h2 class="project-title">AI CourseBot <a href="https://github.com/kailash-turimella/usf-coursebot" target="_blank" style="margin-left: 8px; color:#E64848;"><i class="fab fa-github"></i></a></h2>
+      <p class="project-description">
+        I developed an <strong>AI chatbot in Go</strong> that allows students to query university course catalogs using <strong>semantic search</strong> and natural language understanding. The system combines embeddings-based retrieval with LLM reasoning to deliver accurate, contextual responses.
+      </p>
+      <ul class="project-details">
+        <li><strong>Semantic Search:</strong> Implemented <strong>ChromaDB (via Docker)</strong> for persistent embeddings storage and efficient query retrieval.</li>
+        <li><strong>LLM Integration:</strong> Connected <strong>OpenAI’s LLM</strong> for contextual understanding, reasoning, and handling of natural language queries.</li>
+        <li><strong>Custom Tools:</strong> Built <strong>MCP tools</strong> to enable advanced queries such as filtering courses by instructor, level, or schedule, and generating <strong>ICS calendar invites</strong>.</li>
+        <li><strong>Data Pipelines:</strong> Automated <strong>CSV ingestion</strong> to embed and index large course datasets for fast, scalable search.</li>
+        <li><strong>User Interaction:</strong> Designed a <strong>web server interface</strong> for seamless interaction, structured query results, and formatted outputs.</li>
+      </ul>
+      <button class="more-btn" onclick="toggleDetails(this)">more</button>
+    </div>
+
+
+    <!-- Stat Arb Engine -->
+    <div class="project-card">
+      <img src="images/project_statarbengine.png" alt="AI Companion" class="project-image">
+      <h2 class="project-title">Stat Arb Engine<a href="https://github.com/kailash-turimella/stat-arb-engine" target="_blank" style="margin-left: 8px; color:#E64848;"><i class="fab fa-github"></i></a></h2>
+      <p class="project-description">
+        I developed a <strong>quantitative trading engine in Python</strong> focused on <strong>quantitative finance, algorithm design, and data validation</strong>, implementing robust statistical arbitrage strategies and comprehensive backtesting frameworks.
+      </p>
+      <ul class="project-details">
+        <li><strong>Trading Strategy Design:</strong> Applied statistical techniques such as <strong>cointegration testing</strong> and <strong>z-score analysis</strong> to identify mispricings and generate long/short trading signals.</li>
+        <li><strong>Backtesting Framework:</strong> Built a simulation environment to evaluate strategies, incorporating entry/exit rules, position sizing, and performance tracking with key metrics like returns, Sharpe ratio, and drawdown.</li>
+        <li><strong>Modular Architecture:</strong> Designed independent components for <strong>signal generation, execution logic, risk management, and performance visualization</strong>, enabling extensibility for future strategies.</li>
+        <li><strong>Data-Driven Insights:</strong> Implemented sensitivity analyses to evaluate the impact of <strong>transaction costs, slippage, and parameter tuning</strong>, ensuring robustness in realistic trading conditions.</li>
+        <li><strong>Visualization & Reporting:</strong> Generated <strong>PnL curves, threshold triggers, and performance dashboards</strong> to make strategy evaluation intuitive and transparent.</li>
+      </ul>
+      <button class="more-btn" onclick="toggleDetails(this)">more</button>
+    </div>
+
+
+    <!-- TF-IDF SEARCH ENGINE -->
+    <div class="project-card">
+      <img src="images/project_tfidfsearchengine.png" alt="TF-IDF Search Engine" class="project-image">
+      <h2 class="project-title">TF-IDF Search Engine <a href="https://github.com/kailash-turimella/tfidf-search-engine" target="_blank" style="margin-left: 8px; color:#E64848;"><i class="fab fa-github"></i></a></h2>
+      <p class="project-description">
+        I built a <strong>scalable, concurrent search engine in Go</strong> that performs document crawling, indexing, and retrieval using <strong>TF-IDF–based ranking</strong>. The system emphasizes efficiency, modularity, and correctness through a well-structured pipeline and comprehensive testing.
+      </p>
+      <ul class="project-details">
+        <li><strong>Concurrent Processing:</strong> Engineered a <strong>crawling and indexing pipeline</strong> with goroutines, channels, and WaitGroup to handle large-scale document ingestion efficiently.</li>
+        <li><strong>Modular Indexing:</strong> Architected a <strong>pluggable Index interface</strong> with both in-memory and SQL implementations, supported by a relational schema with foreign keys for optimized joins and data integrity.</li>
+        <li><strong>Ranking System:</strong> Implemented a <strong>TF-IDF retrieval model</strong> with stopword filtering and Snowball stemming to improve precision and relevance in search results.</li>
+        <li><strong>Testing & Reliability:</strong> Built a <strong>unit + integration test suite</strong> covering HTML parsing, URL normalization, concurrency, and TF-IDF scoring to ensure correctness and robustness.</li>
+      </ul>
+      <button class="more-btn" onclick="toggleDetails(this)">more</button>
+    </div>
+
+
+    <!-- AI COMPANION -->
+    <div class="project-card">
+    <img src="images/project_companionai.png" alt="AI Companion" class="project-image">
+    <h2 class="project-title">
+        AI Companion 
+        <a href="https://github.com/kailash-turimella/ai-companion" target="_blank" style="margin-left: 8px; color:#E64848;">
+        <i class="fab fa-github"></i>
+        </a>
+    </h2>
+    <p class="project-description">
+        I independently built a <strong>full-stack web platform</strong> that allows users to create AI chatbots with customizable personalities and long-term memory. The project integrates modern frameworks, scalable infrastructure, and multiple third-party services into a cohesive, production-ready system.
+    </p>
+    <ul class="project-details">
+        <li><strong>Full-Stack Development:</strong> Designed and developed both <strong>front-end (Next.js + Tailwind CSS)</strong> and <strong>back-end services</strong>, creating a responsive, user-friendly interface.</li>
+        <li><strong>AI Memory & Reasoning:</strong> Implemented <strong>long-term memory</strong> using embeddings with Pinecone, enabling chatbots to recall context across sessions.</li>
+        <li><strong>Performance Optimization:</strong> Leveraged <strong>Upstash Redis</strong> for fast caching and <strong>Supabase with Prisma</strong> for reliable database management.</li>
+        <li><strong>Integrations:</strong> Connected a wide range of services, including <strong>Clerk</strong> for authentication, <strong>Cloudinary</strong> for media storage, <strong>OpenAI</strong> for core LLM capabilities, <strong>Replicate</strong> for model hosting, and <strong>Stripe</strong> for payments.</li>
+        <li><strong>Deployment:</strong> Successfully deployed the platform with <strong>Vercel</strong>, ensuring scalability and continuous availability.</li>
+        <li><strong>Impact:</strong> Developed a fully functional end-to-end product that demonstrates proficiency in <strong>AI integration, cloud architecture, and web systems engineering</strong>.</li>
+    </ul>
+    <button class="more-btn" onclick="toggleDetails(this)">more</button>
+    </div>
+
+
+
+    <!-- DIJKSTRA'S ALGORITHM VISUALIZER -->
+    <div class="project-card">
+      <img src="images/project_dijkstras.jpeg" alt="Interactive Shortest Path Visualizer" class="project-image">
+      <h2 class="project-title">Shortest Path Finder<a href="https://github.com/kailash-turimella/Dijkstra-on-US-Map" target="_blank" style="margin-left: 8px; color:#E64848;"><i class="fab fa-github"></i></a></h2>
+      <p class="project-description">
+        I developed an <strong>interactive Java application</strong> that computes shortest paths between U.S. cities using <strong>Dijkstra’s Algorithm</strong>, combining efficient graph data structures with a user-friendly visualization interface.
+      </p>
+      <ul class="project-details">
+        <li><strong>Algorithm Implementation:</strong> Designed a <strong>priority queue–based version of Dijkstra’s Algorithm</strong> to efficiently compute shortest paths in weighted graphs.</li>
+        <li><strong>Graph Representation:</strong> Built optimized data structures to store city and route data, enabling fast queries and scalable performance.</li>
+        <li><strong>Interactive Visualization:</strong> Created a <strong>GUI map interface</strong> allowing users to select source and destination cities and visualize computed paths in real time.</li>
+        <li><strong>Performance Optimization:</strong> Ensured efficiency through careful use of Java collections and data handling, making the tool responsive even with large datasets.</li>
+      </ul>
+      <button class="more-btn" onclick="toggleDetails(this)">more</button>
+    </div>
+
+  </div>
+
+  <script>
+document.querySelectorAll('.more-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.project-card');
+    const details = card.querySelector('.project-details');
+    if (details.style.display === "block") {
+      details.style.display = "none";
+      btn.textContent = "more";
+    } else {
+      details.style.display = "block";
+      btn.textContent = "less";
+    }
+  });
+});
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience - Kailash Turimella</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
+    }
+    
+    nav {
+      background-color: #b30000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .nav-links a.active {
+      background-color: white;
+      color: #b30000;
+    }
+
+    .nav-icons {
+      position: absolute;
+      right: 30px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-icons a {
+      background-color: white;
+      color: #b30000;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-icons a:hover {
+      transform: scale(1.1);
+      background-color: #fff3f3;
+    }
+
+    .experience-container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .experience-section {
+      display: flex;
+      gap: 20px;
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      align-items: flex-start;
+    }
+
+    .experience-section:last-child {
+      border-bottom: none;
+    }
+
+    .experience-image {
+        flex-shrink: 0;
+        width: 120px;
+        height: 120px;
+        object-fit: contain; /* shows the full image without cropping */
+        border-radius: 8px;
+        background-color: white; /* optional — fills any blank space */
+    }
+
+    .experience-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .position-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #E64848;
+      margin: 0;
+    }
+
+    .company-name {
+      font-size: 1.2em;
+      color: #E64848;
+      margin: 2px 0 0 0;
+    }
+
+    .experience-date {
+      font-size: 1em;
+      color: #777;
+      font-weight: bold;
+    }
+
+    .experience-content p {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="/" class="active">Experience</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="nav-icons">
+      <a href="mailto:kailash.turimella@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/kailash-turimella" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/kailash-turimella" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </nav>
+
+
+  <!-- DREAMABLE -->
+  <div class="experience-container">
+    <div class="experience-section">
+      <img src="images/logo_dreamable.jpg" alt="Dreamable" class="experience-image">
+      <div class="experience-content">
+        <div class="experience-header">
+          <div>
+            <h2 class="position-title">AI Intern</h2>
+            <div class="company-name">Dreamable</div>
+          </div>
+          <span class="experience-date">June 2025 – July 2025</span>
+        </div>
+        <p>At Dreamable, I worked on building AI-driven automation workflows that streamlined data collection, analysis, and outreach. My focus was on leveraging tools like <strong>Flowise AI and n8n</strong> to design scalable pipelines that combined large language models, structured data processing, and API integrations.</p>
+        <ul style="font-size: 1.1em; color: #555; line-height: 1.6; margin-top: 10px; padding-left: 20px;">
+          <li style="margin-bottom: 10px;"><strong>Workflow Automation:</strong> Designed robust n8n workflows with conditional logic, randomized indices, and iterative loops, enabling more efficient and fault-tolerant automations.</li>
+          <li style="margin-bottom: 10px;"><strong>LinkedIn Data Pipeline:</strong> Built an automated workflow to identify and extract creator/professional data from LinkedIn profiles. This system structured names, titles, and companies into Google Sheets for downstream analysis.</li>
+          <li style="margin-bottom: 10px;"><strong>Data Quality & Reliability:</strong> Implemented email validation, fallback searches, and error-handling mechanisms to ensure outreach reliability and prevent duplicates or workflow failures.</li>
+          <li style="margin-bottom: 10px;"><strong>Hands-on AI Integration:</strong> Trained and tested <strong>RAG-based models</strong> in Flowise, gaining experience in retrieval-augmented generation, workflow orchestration, and conversational AI development.</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!-- TA @ USF -->
+    <div class="experience-section">
+      <img src="images/logo_usf.jpeg" alt="USF" class="experience-image">
+      <div class="experience-content">
+        <div class="experience-header">
+          <div>
+            <h2 class="position-title">Data Structures and Algorithms TA</h2>
+            <div class="company-name">University of San Francisco</div>
+          </div>
+          <span class="experience-date">Jan 2025 – May 2025</span>
+        </div>
+        <p>Served as a Teaching Assistant for Data Structures & Algorithms, supporting students in mastering core computer science concepts such as recursion, sorting, trees, and graph algorithms. Responsibilities included leading office hours, reviewing assignments, and mentoring students on problem-solving approaches and complexity analysis. This role strengthened my technical foundations while enhancing my communication and leadership skills through teaching and one-on-one guidance.</p>
+      </div>
+    </div>
+
+
+
+    <!-- CS TUTOR @ USF -->
+    <div class="experience-section">
+      <img src="images/logo_usf.jpeg" alt="USF" class="experience-image">
+      <div class="experience-content">
+        <div class="experience-header">
+          <div>
+            <h2 class="position-title">Computer Science Tutor</h2>
+            <div class="company-name">University of San Francisco</div>
+          </div>
+          <span class="experience-date">Aug 2024 – May 2025</span>
+        </div>
+        <p>Tutored students in foundational and advanced computer science courses, including Computer Architecture, Software Development, and Data Structures & Algorithms. Provided one-on-one and group support to strengthen understanding of core concepts, guide problem-solving strategies, and improve coding proficiency. This role reinforced my own technical knowledge while building strong communication and mentoring skills.</p>
+      </div>
+    </div>
+
+
+    <!-- PUBLICIS SAPIENT -->
+    <div class="experience-section">
+      <img src="images/logo_publicissapient.jpeg" alt="PS" class="experience-image">
+      <div class="experience-content">
+        <div class="experience-header">
+          <div>
+            <h2 class="position-title">Software Engineering Intern</h2>
+            <div class="company-name">Publicis Sapient</div>
+          </div>
+          <span class="experience-date">May 2024 – Aug 2024</span>
+        </div>
+        <p>
+          During my internship at Publicis Sapient, I contributed to the development of an <strong>AI-powered chatbot</strong> for a major automobile brand. My work combined <strong>cloud infrastructure engineering</strong> and <strong>AI safety design</strong>, ensuring the chatbot was both scalable and trustworthy.
+        </p>
+        <ul style="font-size: 1.1em; color: #555; line-height: 1.6; margin-top: 10px; padding-left: 20px;">
+          <li style="margin-bottom: 10px;"><strong>Cloud Infrastructure Automation:</strong> Authored <strong>Terraform scripts</strong> to provision a complete AWS-based ingestion pipeline, including S3 buckets, EventBridge schedulers, SNS topics, and Lambda functions. This automated setup allowed the team to rapidly spin up and manage large-scale data pipelines.</li>
+          <li style="margin-bottom: 10px;"><strong>Web Scraping:</strong> Built an <strong>AWS Lambda scraper</strong> that crawled all subdomains of the client’s website and stored structured results in S3 for downstream processing and model training.</li>
+          <li style="margin-bottom: 10px;"><strong>AI Guardrails Framework:</strong> Designed and implemented a <strong>configurable guardrails system</strong> that applied boundary checks to both inputs and outputs of the chatbot.
+            <ul style="margin-top: 5px; padding-left: 20px;">
+              <li style="margin-bottom: 5px;">Input rails enforced safe prompts, jailbreak protection, and topical constraints.</li>
+              <li style="margin-bottom: 5px;">Output rails filtered competitor mentions, enforced brand tone, removed profane content, and sanitized sensitive PII.</li>
+              <li style="margin-bottom: 5px;">Exposed the framework via a <strong>REST API</strong>, making it easy to integrate into existing services and client architectures.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KODELY -->
+    <div class="experience-section">
+      <img src="images/logo_kodely.jpeg" alt="Kodely" class="experience-image">
+      <div class="experience-content">
+        <div class="experience-header">
+          <div>
+            <h2 class="position-title">Workshop Leader</h2>
+            <div class="company-name">Kodely</div>
+          </div>
+          <span class="experience-date">Oct 2023 – May 2024</span>
+        </div>
+        <p>At Kodely, I lead design-based workshops for students. My role combined teaching, mentorship, and curriculum delivery.</p>
+        <ul style="font-size: 1.1em; color: #555; line-height: 1.6; margin-top: 10px; padding-left: 20px;">
+          <li style="margin-bottom: 10px;"><strong>Hands-on Teaching:</strong> Conducted after-school workshops across schools and districts, guiding students through engaging, project-based activities that connect real-world applications to classroom learning.</li>
+          <li style="margin-bottom: 10px;"><strong>Curriculum Delivery:</strong> Leveraged Kodely’s structured curriculum while integrating my own subject expertise to deliver impactful, memorable learning experiences.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
