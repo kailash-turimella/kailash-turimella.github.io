@@ -135,3 +135,7 @@ nav {
 .experience-content ul li {
   margin-bottom: 10px;  /* space between list items */
 }
+
+.nav-icons a i {
+  font-size: 14px; /* adjust if needed */
+}
